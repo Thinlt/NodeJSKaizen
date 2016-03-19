@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <h1>My App ha ha!</h1>
+    <div><%= new Date() %></div>
+    <br/>
+    <div>Title: <%= title %></div>
+    <div>
+        <% for (var i = 0; i < items.length; i++) { %>
+            <li>
+                <span>id: <%= items[i].id %></span>
+                <span> - desc: <%= items[i].desc %></span>
+            </li>
+        <% } %>
+    </div>
+    <div>
+        <form action="/add" method="post">
+            Item: <input type="text" name="newItem" />
+            <button type="submit">Add new Item</button>
+        </form>
+    </div>
+
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

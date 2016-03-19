@@ -1,0 +1,5 @@
+#ignore node package
+node_modules
+*~
+/.idea
+/www.iml
