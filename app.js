@@ -7,11 +7,11 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
+var mongodb = require('mongodb');
 
 // define app
 
 var app = express();
-
 
 // configure app
 
@@ -23,6 +23,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use(bodyParser());
+
 
 // define routes
 
